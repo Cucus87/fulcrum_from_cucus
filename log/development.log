@@ -1,0 +1,1507 @@
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110210082458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110210082458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110210082458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+SQLite3::SQLException: table users has no column named confirmation_token: CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110210082458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+SQLite3::SQLException: no such table: main.users: CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110210082458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+SQLite3::SQLException: no such table: main.users: CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110210082458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+SQLite3::SQLException: table users has no column named confirmation_token: CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110210082458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+SQLite3::SQLException: table users has no column named confirmation_token: CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110210082458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20110210082458"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateProjects (20110210091929)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "point_scale" varchar(255) DEFAULT 'fibonacci', "start_date" date, "iteration_start_day" integer DEFAULT 1, "iteration_length" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20110210091929"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateProjectsUsers (20110316082355)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "projects_users" ("project_id" integer, "user_id" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20110316082355"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateStories (20110412083637)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "estimate" integer, "story_type" varchar(255) DEFAULT 'feature', "state" varchar(255) DEFAULT 'unstarted', "accepted_at" date, "requested_by_id" integer, "owned_by_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20110412083637"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddPositionToStories (20110502100528)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "stories" ADD "position" decimal
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20110502100528"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddNameAndInitialsToUsers (20110627083011)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "name" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "initials" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20110627083011"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChangesets (20110706094137)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "changesets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20110706094137"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateNotes (20110727105037)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "note" text, "user_id" integer, "story_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20110727105037"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddNotifyPreference (20110914192131)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "email_delivery" boolean DEFAULT 't'[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "email_acceptance" boolean DEFAULT 't'
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "email_rejection" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20110914192131"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to DefaultEmailPrefsToTrue (20110914211417)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email_delivery IS NULL or email_acceptance IS NULL OR email_rejection IS NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20110914211417"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddLabelsToStory (20111005192846)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "stories" ADD "labels" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20111005192846"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddDefaultVelocityToProjects (20111009095221)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "projects" ADD "default_velocity" integer DEFAULT 10[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20111009095221"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddResetPasswordSentAtToUsers (20120319114057)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+SQLite3::SQLException: duplicate column name: reset_password_sent_at: ALTER TABLE "users" ADD "reset_password_sent_at" datetime
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddResetPasswordSentAtToUsers (20120319114057)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+SQLite3::SQLException: duplicate column name: reset_password_sent_at: ALTER TABLE "users" ADD "reset_password_sent_at" datetime
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddResetPasswordSentAtToUsers (20120319114057)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20120319114057"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to AddLocaleToUsers (20120504152649)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" ADD "locale" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20120504152649"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-02-23 10:38:30 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/assets/rails.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (52.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (100.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-02-23 10:39:02 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.1ms)
+
+
+Started GET "/story" for 127.0.0.1 at 2014-02-23 10:39:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/story"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (41.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-02-23 10:39:39 +0100
+Processing by ProjectsController#index as HTML
+Completed 401 Unauthorized in 37ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-23 10:39:40 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 1708ms (Views: 1689.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-23 10:39:41 +0100
+
+
+Started GET "/assets/jquery-1.8.3.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:41 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:41 +0100
+
+
+Started GET "/assets/jquery.gritter.min.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/jquery-ui-1.8.23.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/jquery.scrollTo-min.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/backbone.rails.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/Markdown.Converter.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/templates/column.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/templates/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/templates/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/templates/note.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/templates/project_velocity.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/templates/project_velocity_override.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/templates/story.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/templates/story_hover.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/mixins/shared_model_methods.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/models/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/models/project.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/models/note.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/models/story.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/models/user.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/collections/note_collection.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/collections/story_collection.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/collections/user_collection.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/column_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/column_visibility_button_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/form_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/iteration_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/note_form.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/note_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/project_velocity_override_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/project_velocity_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/project_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/views/story_view.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/fulcrum.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/tag-it.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/i18n.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-02-23 10:39:42 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-02-23 10:39:58 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BcjZsmECUkD4bZZr+l6MoQEi5/bUBCpgak2xGhplD8w=", "user"=>{"email"=>"m.sitges.arr@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'm.sitges.arr@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 7ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BcjZsmECUkD4bZZr+l6MoQEi5/bUBCpgak2xGhplD8w=", "user"=>{"email"=>"m.sitges.arr@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 113ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 10:39:58 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-02-23 10:40:23 +0100
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered registrations/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 10:40:23 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users" for 127.0.0.1 at 2014-02-23 10:40:42 +0100
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BcjZsmECUkD4bZZr+l6MoQEi5/bUBCpgak2xGhplD8w=", "user"=>{"name"=>"Marc", "initials"=>"MS", "email"=>"m.sitges.arr@gmail.com"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'm.sitges.arr@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 111ms
+
+NameError (undefined local variable or method `confirmed_at' for #<User:0x00000102ca0208>):
+  activemodel (4.0.2) lib/active_model/attribute_methods.rb:439:in `method_missing'
+  activerecord (4.0.2) lib/active_record/attribute_methods.rb:155:in `method_missing'
+  devise (3.2.0) lib/devise/models/confirmable.rb:88:in `confirmed?'
+  devise (3.2.0) lib/devise/models/confirmable.rb:163:in `confirmation_required?'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1589004381884635789__create__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `create_record'
+  activerecord (4.0.2) lib/active_record/timestamp.rb:57:in `create_record'
+  activerecord (4.0.2) lib/active_record/persistence.rb:477:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1589004381884635789__save__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/persistence.rb:106:in `save'
+  activerecord (4.0.2) lib/active_record/validations.rb:51:in `save'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:32:in `save'
+  activerecord (4.0.2) lib/active_record/transactions.rb:270:in `block (2 levels) in save'
+  activerecord (4.0.2) lib/active_record/transactions.rb:326:in `block in with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `block in transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:210:in `within_new_transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:209:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:323:in `with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/transactions.rb:270:in `block in save'
+  activerecord (4.0.2) lib/active_record/transactions.rb:281:in `rollback_active_record_state!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:269:in `save'
+  devise (3.2.0) app/controllers/devise/registrations_controller.rb:15:in `create'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:453:in `_run__529734952672241690__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__778105653293149870__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.8ms)
+
+
+Started GET "/testcard" for 127.0.0.1 at 2014-02-23 10:52:30 +0100
+Processing by StaticController#testcard as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-23 10:52:30 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-1.8.3.js?body=1" for 127.0.0.1 at 2014-02-23 10:52:30 +0100
+
+
+Started GET "/assets/jquery-ui-1.8.23.js?body=1" for 127.0.0.1 at 2014-02-23 10:52:30 +0100
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 10:52:30 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-23 10:53:00 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-1.8.3.js?body=1" for 127.0.0.1 at 2014-02-23 10:53:00 +0100
+
+
+Started GET "/assets/jquery-ui-1.8.23.js?body=1" for 127.0.0.1 at 2014-02-23 10:53:00 +0100
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 10:53:00 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-02-23 10:53:26 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BcjZsmECUkD4bZZr+l6MoQEi5/bUBCpgak2xGhplD8w=", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BcjZsmECUkD4bZZr+l6MoQEi5/bUBCpgak2xGhplD8w=", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 160ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-1.8.3.js?body=1" for 127.0.0.1 at 2014-02-23 10:53:26 +0100
+
+
+Started GET "/assets/jquery-ui-1.8.23.js?body=1" for 127.0.0.1 at 2014-02-23 10:53:26 +0100
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 10:53:26 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "changesets"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "changesets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "notes"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "note" text, "user_id" integer, "story_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "point_scale" varchar(255) DEFAULT 'fibonacci', "start_date" date, "iteration_start_day" integer DEFAULT 1, "iteration_length" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime, "default_velocity" integer DEFAULT 10) 
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "projects_users"[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "projects_users" ("project_id" integer, "user_id" integer) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "stories"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "estimate" integer, "story_type" varchar(255) DEFAULT 'feature', "state" varchar(255) DEFAULT 'unstarted', "accepted_at" date, "requested_by_id" integer, "owned_by_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "position" decimal, "labels" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "initials" varchar(255), "email_delivery" boolean DEFAULT 't', "email_acceptance" boolean DEFAULT 't', "email_rejection" boolean DEFAULT 't', "locale" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.5ms)[0m  [1mDROP TABLE "changesets"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "changesets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "notes"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "note" text, "user_id" integer, "story_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "point_scale" varchar(255) DEFAULT 'fibonacci', "start_date" date, "iteration_start_day" integer DEFAULT 1, "iteration_length" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime, "default_velocity" integer DEFAULT 10) 
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "projects_users"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects_users" ("project_id" integer, "user_id" integer) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "stories"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "estimate" integer, "story_type" varchar(255) DEFAULT 'feature', "state" varchar(255) DEFAULT 'unstarted', "accepted_at" date, "requested_by_id" integer, "owned_by_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "position" decimal, "labels" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "initials" varchar(255), "email_delivery" boolean DEFAULT 't', "email_acceptance" boolean DEFAULT 't', "email_rejection" boolean DEFAULT 't', "locale" varchar(255)) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "initials", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 23 Feb 2014 09:56:35 UTC +00:00], ["email", "test@example.com"], ["encrypted_password", "$2a$10$fts.WA4JLf3Z/AYcp0daq.9bFiALt5e72q.L0B4VBTmQQ50iHPlXC"], ["initials", "TU"], ["name", "Test User"], ["updated_at", Sun, 23 Feb 2014 09:56:35 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.7ms)[0m  [1mDROP TABLE "changesets"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "changesets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "notes"[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "note" text, "user_id" integer, "story_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "point_scale" varchar(255) DEFAULT 'fibonacci', "start_date" date, "iteration_start_day" integer DEFAULT 1, "iteration_length" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime, "default_velocity" integer DEFAULT 10) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "projects_users"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects_users" ("project_id" integer, "user_id" integer) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "stories"[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "estimate" integer, "story_type" varchar(255) DEFAULT 'feature', "state" varchar(255) DEFAULT 'unstarted', "accepted_at" date, "requested_by_id" integer, "owned_by_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "position" decimal, "labels" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "initials" varchar(255), "email_delivery" boolean DEFAULT 't', "email_acceptance" boolean DEFAULT 't', "email_rejection" boolean DEFAULT 't', "locale" varchar(255)) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.8ms)[0m  [1mDROP TABLE "changesets"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "changesets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "notes"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "note" text, "user_id" integer, "story_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "point_scale" varchar(255) DEFAULT 'fibonacci', "start_date" date, "iteration_start_day" integer DEFAULT 1, "iteration_length" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime, "default_velocity" integer DEFAULT 10) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "projects_users"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects_users" ("project_id" integer, "user_id" integer) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "stories"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "estimate" integer, "story_type" varchar(255) DEFAULT 'feature', "state" varchar(255) DEFAULT 'unstarted', "accepted_at" date, "requested_by_id" integer, "owned_by_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "position" decimal, "labels" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "initials" varchar(255), "email_delivery" boolean DEFAULT 't', "email_acceptance" boolean DEFAULT 't', "email_rejection" boolean DEFAULT 't', "locale" varchar(255)) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "initials", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 23 Feb 2014 10:00:00 UTC +00:00], ["email", "test@example.com"], ["encrypted_password", "$2a$10$vwOXXFsN0FzhLerMU4KFDOpH6P/2DIwPirGlxALaUAQFFjcwb8E4q"], ["initials", "TU"], ["name", "Test User"], ["updated_at", Sun, 23 Feb 2014 10:00:00 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.7ms)[0m  [1mDROP TABLE "changesets"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "changesets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "notes"[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "note" text, "user_id" integer, "story_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "point_scale" varchar(255) DEFAULT 'fibonacci', "start_date" date, "iteration_start_day" integer DEFAULT 1, "iteration_length" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime, "default_velocity" integer DEFAULT 10) 
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "projects_users"[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "projects_users" ("project_id" integer, "user_id" integer) 
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "stories"[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "estimate" integer, "story_type" varchar(255) DEFAULT 'feature', "state" varchar(255) DEFAULT 'unstarted', "accepted_at" date, "requested_by_id" integer, "owned_by_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "position" decimal, "labels" varchar(255)) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "initials" varchar(255), "email_delivery" boolean DEFAULT 't', "email_acceptance" boolean DEFAULT 't', "email_rejection" boolean DEFAULT 't', "locale" varchar(255)) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.7ms)[0m  [1mDROP TABLE "changesets"[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "changesets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "notes"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "note" text, "user_id" integer, "story_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "point_scale" varchar(255) DEFAULT 'fibonacci', "start_date" date, "iteration_start_day" integer DEFAULT 1, "iteration_length" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime, "default_velocity" integer DEFAULT 10) 
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "projects_users"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects_users" ("project_id" integer, "user_id" integer) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "stories"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "estimate" integer, "story_type" varchar(255) DEFAULT 'feature', "state" varchar(255) DEFAULT 'unstarted', "accepted_at" date, "requested_by_id" integer, "owned_by_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "position" decimal, "labels" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "initials" varchar(255), "email_delivery" boolean DEFAULT 't', "email_acceptance" boolean DEFAULT 't', "email_rejection" boolean DEFAULT 't', "locale" varchar(255)) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.9ms)[0m  [1mDROP TABLE "changesets"[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "changesets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "notes"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "note" text, "user_id" integer, "story_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "projects"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "point_scale" varchar(255) DEFAULT 'fibonacci', "start_date" date, "iteration_start_day" integer DEFAULT 1, "iteration_length" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime, "default_velocity" integer DEFAULT 10) 
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "projects_users"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects_users" ("project_id" integer, "user_id" integer) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "stories"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "estimate" integer, "story_type" varchar(255) DEFAULT 'feature', "state" varchar(255) DEFAULT 'unstarted', "accepted_at" date, "requested_by_id" integer, "owned_by_id" integer, "project_id" integer, "created_at" datetime, "updated_at" datetime, "position" decimal, "labels" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "initials" varchar(255), "email_delivery" boolean DEFAULT 't', "email_acceptance" boolean DEFAULT 't', "email_rejection" boolean DEFAULT 't', "locale" varchar(255)) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+
+
+Started GET "/testcard" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#testcard as HTML
+Completed 401 Unauthorized in 31ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 275ms (Views: 257.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery-1.8.3.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/jquery.scrollTo-min.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/jquery-ui-1.8.23.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/jquery.gritter.min.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/backbone.rails.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/Markdown.Converter.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/templates/column.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/templates/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/templates/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/templates/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/templates/project_velocity.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/templates/project_velocity_override.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/templates/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/templates/story_hover.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/models/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/models/project.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/models/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/views/story_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/tag-it.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/assets/i18n.js?body=1" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 11:13:43 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddConfirmableToDeviseV1 (20140223101921)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140223101921"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-23 11:19:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (102.8ms)
+Completed 200 OK in 398ms (Views: 352.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.gritter.min.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/jquery-1.8.3.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/jquery.scrollTo-min.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/jquery-ui-1.8.23.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/backbone.rails.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/Markdown.Converter.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/templates/column.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/templates/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/templates/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/templates/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/templates/project_velocity.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/templates/project_velocity_override.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/templates/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/templates/story_hover.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/mixins/shared_model_methods.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/models/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/models/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/models/project.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/models/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/models/user.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/collections/note_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/collections/story_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/collections/user_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/column_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/column_visibility_button_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/form_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/iteration_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/note_form.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/note_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/project_velocity_override_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/project_velocity_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/story_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/views/project_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/fulcrum.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/tag-it.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/i18n.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-02-23 11:19:58 +0100
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/jquery-1.8.3.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/jquery.gritter.min.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/jquery-ui-1.8.23.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/jquery.scrollTo-min.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/Markdown.Converter.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/column.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/backbone.rails.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/project_velocity.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/project_velocity_override.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/story_hover.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/mixins/shared_model_methods.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/project.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/user.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/collections/note_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/collections/story_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/collections/user_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/column_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/column_visibility_button_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/form_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/iteration_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/note_form.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/note_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/project_velocity_override_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/project_velocity_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/project_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/views/story_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/fulcrum.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/tag-it.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/i18n.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/backbone.rails.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/column.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/project_velocity.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/project_velocity_override.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/templates/story_hover.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/mixins/shared_model_methods.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/project.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/models/user.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/collections/note_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/collections/story_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:01 +0100
+
+
+Started GET "/assets/collections/user_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/column_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/column_visibility_button_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/form_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/iteration_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/note_form.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/note_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/project_velocity_override_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/views/project_velocity_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/fulcrum.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered registrations/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.23.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/jquery-1.8.3.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/jquery.scrollTo-min.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/jquery.gritter.min.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/backbone.rails.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/Markdown.Converter.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/templates/column.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/templates/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/templates/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/templates/project_velocity.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/templates/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/templates/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/templates/project_velocity_override.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/templates/story_hover.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/mixins/shared_model_methods.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/models/iteration.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/models/note.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/models/project.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/models/story.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/models/user.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/collections/note_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/collections/story_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/collections/user_collection.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/column_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/column_visibility_button_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/form_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/iteration_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/keycut_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/note_form.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/note_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/project_velocity_override_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/project_velocity_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/project_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/views/story_view.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/fulcrum.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/bootstrap-twipsy.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/tag-it.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/i18n.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+
+
+Started GET "/locales.js" for 127.0.0.1 at 2014-02-23 11:20:03 +0100
+Processing by ApplicationController#locales as JS
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users" for 127.0.0.1 at 2014-02-23 11:20:09 +0100
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BcjZsmECUkD4bZZr+l6MoQEi5/bUBCpgak2xGhplD8w=", "user"=>{"name"=>"Marc", "initials"=>"MS", "email"=>"m.sitges.arr@gmail.com"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'm.sitges.arr@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 106ms
+
+NameError (undefined local variable or method `confirmed_at' for #<User:0x00000104e4b498>):
+  activemodel (4.0.2) lib/active_model/attribute_methods.rb:439:in `method_missing'
+  activerecord (4.0.2) lib/active_record/attribute_methods.rb:155:in `method_missing'
+  devise (3.2.0) lib/devise/models/confirmable.rb:88:in `confirmed?'
+  devise (3.2.0) lib/devise/models/confirmable.rb:163:in `confirmation_required?'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1874959060246347312__create__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:306:in `create_record'
+  activerecord (4.0.2) lib/active_record/timestamp.rb:57:in `create_record'
+  activerecord (4.0.2) lib/active_record/persistence.rb:477:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:383:in `_run__1874959060246347312__save__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  activerecord (4.0.2) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.0.2) lib/active_record/persistence.rb:106:in `save'
+  activerecord (4.0.2) lib/active_record/validations.rb:51:in `save'
+  activerecord (4.0.2) lib/active_record/attribute_methods/dirty.rb:32:in `save'
+  activerecord (4.0.2) lib/active_record/transactions.rb:270:in `block (2 levels) in save'
+  activerecord (4.0.2) lib/active_record/transactions.rb:326:in `block in with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `block in transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:210:in `within_new_transaction'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:202:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:209:in `transaction'
+  activerecord (4.0.2) lib/active_record/transactions.rb:323:in `with_transaction_returning_status'
+  activerecord (4.0.2) lib/active_record/transactions.rb:270:in `block in save'
+  activerecord (4.0.2) lib/active_record/transactions.rb:281:in `rollback_active_record_state!'
+  activerecord (4.0.2) lib/active_record/transactions.rb:269:in `save'
+  devise (3.2.0) app/controllers/devise/registrations_controller.rb:15:in `create'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:453:in `_run__1870546035148021185__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3506261646939748419__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.8ms)
